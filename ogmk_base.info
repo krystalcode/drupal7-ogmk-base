@@ -1,0 +1,17 @@
+name = Commerce Marketplace Base
+description = A module that provides base functionality and configuration for a commerce marketplace.
+core = 7.x
+package = Commerce Marketplace Features
+version = 7.x-0.1-dev
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = description_field
+features[field_base][] = field_image
+features[field_base][] = field_image2
+features[field_base][] = field_images
+features[field_base][] = field_text
+features[field_base][] = name_field
+features[field_base][] = title_field
+features_exclude[dependencies][features] = features
+features_exclude[dependencies][image] = image
