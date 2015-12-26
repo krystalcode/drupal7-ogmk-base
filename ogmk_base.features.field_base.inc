@@ -33,6 +33,14 @@ function ogmk_base_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
+  /**
+   * @Issue(
+   *   "Consider moving description_field to ogmk_taxonomy module"
+   *   type="task"
+   *   priority="low"
+   *   labels="modularity"
+   * )
+   */
   // Exported field_base: 'description_field'.
   $field_bases['description_field'] = array(
     'active' => 1,
