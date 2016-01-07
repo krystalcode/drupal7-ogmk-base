@@ -3,3 +3,189 @@
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ * Public API.
+ */
+
+/**
+ * @Issue(
+ *   "Test if these functionsn work as expected for for multiple referencing
+ *   nodes"
+ *   type="task"
+ *   priority="low"
+ *   labels="testing"
+ * )
+ * @Issue(
+ *   "Add order by functionality to these functions"
+ *   type="improvement"
+ *   priority="low"
+ *   labels="api"
+ * )
+ * @Issue(
+ *   "Create API functions for getting nodes referencing commerce products and
+ *   use them in ogmk_products module"
+ *   type="task"
+ *   priority="low"
+ *   labels="api, modularity"
+ * )
+ */
+
+/**
+ * Check if there are nodes referencing an entity.
+ *
+ * This has been tested to work for references via "entityreference" fields.
+ *
+ * @param int|object $entity
+ *   The entity id or object for whom to get the referencing nodes.
+ * @param string $node_type
+ *   The node type look for.
+ * @param string $field_name
+ *   The name of the entityreference field that holds the reference.
+ * @param string $field_column
+ *   The name of the column that holds the id of the referencing node. This
+ *   should only be the "target_id" part in a SQL column named
+ *   "ogmk_line_item_ref_target_id", for example.
+ * @param array $options
+ *   An array of options. Available options are:
+ *   - entity_type: the entity type, required only if the entity object is given
+ *     instead of the entity id.
+ *   - start: The first record from the result set to return. If NULL, removes
+ *     any range directives that are set (@see EntityFieldQuery::range()).
+ *   - length: The number of records to return from the result set
+ *     (@see EntityFieldQuery::range()).
+ *
+ * @return null|array
+ *   NULL if there is no node referencing the line item.
+ *   An array containing the node objects otherwise.
+ */
+/**
+ * @param int|object $entity
+ *   The entity id or object for whom to check if there is a referencing node.
+ * @param string $node_type
+ *   The node type to look for.
+ *
+ * @return int
+ *   Zero (0) if there is no node referencing the entity.
+ *   The node's id otherwise.
+ */
+function ogmk_base_entity_has_referencing_nodes($entity, $node_type, $field_name, $field_column, array $options = array()) {
+  $options = array_merge(
+    array(
+      'entity_type' => NULL,
+      'start'       => NULL,
+      'length'      => NULL,
+    ),
+    $options
+  );
+
+  // Get the entity's id, depending on whether the id was passed
+  $entity_id = NULL;
+  if (is_int($entity)) {
+    $entity_id = $entity;
+  } else {
+    if (!$options['entity_type']) {
+      throw new Exception('You must specify the entity type for which to check for referencing nodes.');
+    }
+    $ids = entity_extract_ids($options['entity_type'], $entity);
+    $entity_id = $ids[0];
+  }
+
+  // Get the node of the requested type that corresponds to the given entity.
+  $query = new EntityFieldQuery();
+  $query
+    ->entityCondition('entity_type', 'node', '=')
+    ->propertyCondition('type', $node_type)
+    ->fieldCondition($field_name, $field_column, $entity_id, '=')
+    ->range($options['start'], $options['length']);
+  $result = $query->execute();
+
+  if (empty($result['node'])) {
+    return FALSE;
+  }
+
+  return $result['node'];
+}
+
+/**
+ * Get the nodes referencing an entity, if there are some.
+ *
+ * This has been tested to work for references via "entityreference" fields.
+ *
+ * @param int|object $entity
+ *   The entity id or object for whom to get the referencing nodes.
+ * @param string $node_type
+ *   The node type look for.
+ * @param string $field_name
+ *   The name of the entityreference field that holds the reference.
+ * @param string $field_column
+ *   The name of the column that holds the id of the referencing node. This
+ *   should only be the "target_id" part in a SQL column named
+ *   "ogmk_line_item_ref_target_id", for example.
+ * @param array $options
+ *   An array of options. @see ogmk_base_entity_has_referencing_nodes().
+ *
+ * @return null|array
+ *   NULL if there is no node referencing the line item.
+ *   An array containing the node objects otherwise.
+ */
+function ogmk_base_entity_get_referencing_nodes($entity, $node_type, $field_name, $field_column, array $options = array()) {
+  // Get the node ids.
+  $result = ogmk_base_entity_has_referencing_nodes($entity, $node_type, $field_name, $field_column, $options);
+
+  if (!$result) {
+    return NULL;
+  }
+
+  // Extract the node ids from the result array.
+  $nodes_ids = array();
+  foreach ($result as $row) {
+    $nodes_ids[] = $row->nid;
+  }
+
+  return node_load_multiple($nodes_ids);
+}
+
+/**
+ * Check if there are nodes referencing a line item.
+ *
+ * @param int|object $line_item
+ *   The line item id or object for whom to check if there are referencing
+ *   nodes.
+ * @param string $node_type
+ *   The node type look for.
+ * @param array $options
+ *   An array of options. @see ogmk_base_entity_has_referencing_nodes().
+ *
+ * @return boolean|array
+ *   FALSE if there is no node referencing the line item.
+ *   An array of objects (one for each node) containing the node id, the
+ *   revision id and the node type otherwise.
+ */
+function ogmk_base_line_item_has_referencing_nodes($line_item, $node_type, array $options = array()) {
+  $options['entity_type'] = 'commerce_line_item';
+  return ogmk_base_entity_has_referencing_nodes($line_item, $node_type, 'ogmk_line_item_ref', 'target_id', $options);
+}
+
+/**
+ * Get the nodes referencing a line item, if there are some.
+ *
+ * @param int|object $line_item
+ *   The line item id or object for whom to get the referencing nodes.
+ * @param string $node_type
+ *   The node type look for.
+ * @param array $options
+ *   An array of options. @see ogmk_base_entity_has_referencing_nodes().
+ *
+ * @param null|object $line_item
+ *   The line item id or object for whom to check if there is a referencing
+ *   node.
+ *
+ * @return null|array
+ *   NULL if there is no node referencing the line item.
+ *   An array containing the node objects otherwise.
+ */
+function ogmk_base_line_item_get_referencing_nodes($line_item, $node_type, array $options = array()) {
+  $options['entity_type'] = 'commerce_line_item';
+  return ogmk_base_entity_get_referencing_nodes($line_item, $node_type, 'ogmk_line_item_ref', 'target_id', $options);
+}
