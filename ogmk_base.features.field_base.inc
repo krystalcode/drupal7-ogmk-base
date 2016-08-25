@@ -62,13 +62,13 @@ function ogmk_base_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_image'.
-  $field_bases['field_image'] = array(
+  // Exported field_base: 'ogmk_image'.
+  $field_bases['ogmk_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_image',
+    'field_name' => 'ogmk_image',
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -85,19 +85,19 @@ function ogmk_base_field_default_field_bases() {
         'class_id' => 1,
         'current_class_id' => 1,
       ),
-      'uri_scheme' => 'storage-field-image',
+      'uri_scheme' => 'storage-ogmk-image',
     ),
     'translatable' => 0,
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_image2'.
-  $field_bases['field_image2'] = array(
+  // Exported field_base: 'ogmk_image2'.
+  $field_bases['ogmk_image2'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_image2',
+    'field_name' => 'ogmk_image2',
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -114,19 +114,19 @@ function ogmk_base_field_default_field_bases() {
         'class_id' => 1,
         'current_class_id' => 1,
       ),
-      'uri_scheme' => 'storage-field-image2',
+      'uri_scheme' => 'storage-ogmk-image2',
     ),
     'translatable' => 0,
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_images'.
-  $field_bases['field_images'] = array(
+  // Exported field_base: 'ogmk_images'.
+  $field_bases['ogmk_images'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_images',
+    'field_name' => 'ogmk_images',
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -143,19 +143,19 @@ function ogmk_base_field_default_field_bases() {
         'class_id' => 1,
         'current_class_id' => 1,
       ),
-      'uri_scheme' => 'storage-field-images',
+      'uri_scheme' => 'storage-ogmk-images',
     ),
     'translatable' => 0,
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_text'.
-  $field_bases['field_text'] = array(
+  // Exported field_base: 'ogmk_text'.
+  $field_bases['ogmk_text'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_text',
+    'field_name' => 'ogmk_text',
     'indexes' => array(
       'format' => array(
         0 => 'format',
