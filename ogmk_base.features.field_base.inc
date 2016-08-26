@@ -254,7 +254,7 @@ function ogmk_base_field_default_field_bases() {
           'type' => 'none',
         ),
         'target_bundles' => array(
-          'product' => 'product',
+          'ogmk_product' => 'ogmk_product',
         ),
       ),
       'target_type' => 'node',
