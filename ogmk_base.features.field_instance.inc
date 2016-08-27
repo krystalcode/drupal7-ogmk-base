@@ -45,8 +45,7 @@ function ogmk_base_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'field_collection_item-ogmk_costs-ogmk_long_text'.
+  // Exported field_instance: 'field_collection_item-ogmk_costs-ogmk_long_text'.
   $field_instances['field_collection_item-ogmk_costs-ogmk_long_text'] = array(
     'bundle' => 'ogmk_costs',
     'default_value' => NULL,
