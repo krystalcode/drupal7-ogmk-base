@@ -62,6 +62,28 @@ function ogmk_base_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
+  // Exported field_base: 'name_field'.
+  $field_bases['name_field'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'name_field',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 255,
+    ),
+    'translatable' => 1,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'ogmk_costs'.
   $field_bases['ogmk_costs'] = array(
     'active' => 1,
@@ -83,49 +105,6 @@ function ogmk_base_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'field_collection',
-  );
-
-  // Exported field_base: 'ogmk_long_text'.
-  $field_bases['ogmk_long_text'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'ogmk_long_text',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'text_long',
-  );
-
-  // Exported field_base: 'ogmk_price'.
-  $field_bases['ogmk_price'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'ogmk_price',
-    'indexes' => array(
-      'currency_price' => array(
-        0 => 'amount',
-        1 => 'currency_code',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'commerce_price',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'commerce_price',
   );
 
   // Exported field_base: 'ogmk_image'.
@@ -232,50 +211,6 @@ function ogmk_base_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'ogmk_text'.
-  $field_bases['ogmk_text'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'ogmk_text',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'max_length' => 255,
-    ),
-    'translatable' => 1,
-    'type' => 'text',
-  );
-
-  // Exported field_base: 'name_field'.
-  $field_bases['name_field'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'name_field',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'max_length' => 255,
-    ),
-    'translatable' => 1,
-    'type' => 'text',
-  );
-
   // Exported field_base: 'ogmk_line_item_ref'.
   $field_bases['ogmk_line_item_ref'] = array(
     'active' => 1,
@@ -308,6 +243,27 @@ function ogmk_base_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'ogmk_long_text'.
+  $field_bases['ogmk_long_text'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'ogmk_long_text',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'text_long',
   );
 
   // Exported field_base: 'ogmk_node_product_ref'.
@@ -344,6 +300,50 @@ function ogmk_base_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'ogmk_price'.
+  $field_bases['ogmk_price'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'ogmk_price',
+    'indexes' => array(
+      'currency_price' => array(
+        0 => 'amount',
+        1 => 'currency_code',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'commerce_price',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'commerce_price',
+  );
+
+  // Exported field_base: 'ogmk_text'.
+  $field_bases['ogmk_text'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'ogmk_text',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 255,
+    ),
+    'translatable' => 1,
+    'type' => 'text',
   );
 
   // Exported field_base: 'title_field'.
