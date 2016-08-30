@@ -5,6 +5,29 @@
  */
 
 /**
+ * Hooks.
+ */
+
+/**
+ * Implements hook_permission().
+ */
+function ogmk_base_permission() {
+  $permissions = array();
+
+  // Create one permission for each role.
+  $roles = user_roles();
+
+  foreach ($roles as $role) {
+    $permissions['have the ' . $role . ' role'] = array(
+      'title' => t('Have the <em>@role</em> role on the site', array('@role' => $role)),
+      'description' => t('This permission should be assigned only to the corresponding role. It is meant to be used in cases where a role check is required, but a permission check is preferrable, such as when exporting Views access control via Features.'),
+    );
+  }
+
+  return $permissions;
+}
+
+/**
  * Public API.
  */
 

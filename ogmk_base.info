@@ -31,3 +31,7 @@ features[field_base][] = title_field
 features[field_instance][] = field_collection_item-ogmk_costs-ogmk_cost_type_ref
 features[field_instance][] = field_collection_item-ogmk_costs-ogmk_long_text
 features[field_instance][] = field_collection_item-ogmk_costs-ogmk_price
+features[user_permission][] = have the administrator role
+features[user_permission][] = have the anonymous user role
+features[user_permission][] = have the authenticated user role
+features[user_permission][] = have the merchant role
