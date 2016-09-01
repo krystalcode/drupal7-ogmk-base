@@ -162,35 +162,6 @@ function ogmk_base_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'ogmk_image2'.
-  $field_bases['ogmk_image2'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'ogmk_image2',
-    'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'image',
-    'settings' => array(
-      'default_image' => 0,
-      'entity_translation_sync' => array(
-        0 => 'fid',
-      ),
-      'storage_class' => array(
-        'class_id' => 1,
-        'current_class_id' => 1,
-      ),
-      'uri_scheme' => 'storage-ogmk-image2',
-    ),
-    'translatable' => 0,
-    'type' => 'image',
-  );
-
   // Exported field_base: 'ogmk_images'.
   $field_bases['ogmk_images'] = array(
     'active' => 1,
