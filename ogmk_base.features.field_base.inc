@@ -62,6 +62,27 @@ function ogmk_base_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
+  // Exported field_base: 'ogmk_body'.
+  $field_bases['ogmk_body'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'ogmk_body',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 1,
+    'type' => 'text_with_summary',
+  );
+
   // Exported field_base: 'name_field'.
   $field_bases['name_field'] = array(
     'active' => 1,
