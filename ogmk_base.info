@@ -42,3 +42,4 @@ features[user_permission][] = have the administrator role
 features[user_permission][] = have the anonymous user role
 features[user_permission][] = have the authenticated user role
 features[user_permission][] = have the merchant role
+features[user_permission][] = use text format ogmk_basic_html
