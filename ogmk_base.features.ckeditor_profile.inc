@@ -1,0 +1,77 @@
+<?php
+/**
+ * @file
+ * ogmk_base.features.ckeditor_profile.inc
+ */
+
+/**
+ * Implements hook_ckeditor_profile_defaults().
+ */
+function ogmk_base_ckeditor_profile_defaults() {
+  $data = array(
+    'ogmk_basic_html' => array(
+      'name' => 'ogmk_basic_html',
+      'settings' => array(
+        'ss' => 2,
+        'toolbar' => '[
+    [\'Format\'],
+    [\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\'],
+    [\'Link\',\'Unlink\'],
+    [\'Maximize\']
+]',
+        'expand' => 't',
+        'default' => 't',
+        'show_toggle' => 'f',
+        'uicolor' => 'default',
+        'uicolor_user' => 'default',
+        'width' => '100%',
+        'lang' => 'en',
+        'auto_lang' => 't',
+        'language_direction' => 'default',
+        'allowed_content' => 't',
+        'extraAllowedContent' => '',
+        'enter_mode' => 'p',
+        'shift_enter_mode' => 'br',
+        'font_format' => 'p;h1;h2;h3;h4;h5;h6',
+        'custom_formatting' => 'f',
+        'formatting' => array(
+          'custom_formatting_options' => array(
+            'indent' => 'indent',
+            'breakBeforeOpen' => 'breakBeforeOpen',
+            'breakAfterOpen' => 'breakAfterOpen',
+            'breakAfterClose' => 'breakAfterClose',
+            'breakBeforeClose' => 0,
+            'pre_indent' => 0,
+          ),
+        ),
+        'css_mode' => 'theme',
+        'css_path' => '',
+        'css_style' => 'theme',
+        'styles_path' => '',
+        'filebrowser' => 'none',
+        'filebrowser_image' => '',
+        'filebrowser_flash' => '',
+        'UserFilesPath' => '%b%f/',
+        'UserFilesAbsolutePath' => '%d%b%f/',
+        'forcePasteAsPlainText' => 't',
+        'html_entities' => 'f',
+        'scayt_autoStartup' => 't',
+        'theme_config_js' => 'f',
+        'js_conf' => '',
+        'loadPlugins' => array(
+          'autogrow' => array(
+            'name' => 'autogrow',
+            'desc' => 'Auto Grow plugin. See <a href="http://ckeditor.com/addon/autogrow">addon page</a> for more details.',
+            'path' => '//cdn.ckeditor.com/4.5.4/full-all/plugins/autogrow/',
+            'buttons' => FALSE,
+            'default' => 'f',
+          ),
+        ),
+      ),
+      'input_formats' => array(
+        'ogmk_basic_html' => 'Basic HTML',
+      ),
+    ),
+  );
+  return $data;
+}
