@@ -17,6 +17,7 @@ function ogmk_base_ckeditor_profile_defaults() {
     [\'Format\'],
     [\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\'],
     [\'Link\',\'Unlink\'],
+    [\'Blockquote\'],
     [\'Maximize\']
 ]',
         'expand' => 't',
@@ -44,8 +45,8 @@ function ogmk_base_ckeditor_profile_defaults() {
             'pre_indent' => 0,
           ),
         ),
-        'css_mode' => 'theme',
-        'css_path' => '',
+        'css_mode' => 'self',
+        'css_path' => '%t/css/ckeditor.css',
         'css_style' => 'theme',
         'styles_path' => '',
         'filebrowser' => 'none',
@@ -61,8 +62,8 @@ function ogmk_base_ckeditor_profile_defaults() {
         'loadPlugins' => array(
           'autogrow' => array(
             'name' => 'autogrow',
-            'desc' => 'Auto Grow plugin. See <a href="http://ckeditor.com/addon/autogrow">addon page</a> for more details.',
-            'path' => '//cdn.ckeditor.com/4.5.4/full-all/plugins/autogrow/',
+            'desc' => 'Auto Grow plugin',
+            'path' => '%editor_path%/plugins/autogrow/',
             'buttons' => FALSE,
             'default' => 'f',
           ),
