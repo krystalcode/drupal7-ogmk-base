@@ -50,6 +50,16 @@ function ogmk_base_user_default_permissions() {
   $permissions['use text format ogmk_basic_html'] = array(
     'name' => 'use text format ogmk_basic_html',
     'roles' => array(
+      'administrator' => 'administrator',
+      'merchant' => 'merchant',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'use text format ogmk_plain_html'.
+  $permissions['use text format ogmk_plain_html'] = array(
+    'name' => 'use text format ogmk_plain_html',
+    'roles' => array(
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
