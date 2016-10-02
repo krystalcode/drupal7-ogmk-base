@@ -178,6 +178,16 @@ news',
     ),
   );
 
+  // Exported format: HTML.
+  $formats['ogmk_html'] = array(
+    'format' => 'ogmk_html',
+    'name' => 'HTML',
+    'cache' => 1,
+    'status' => 1,
+    'weight' => 0,
+    'filters' => array(),
+  );
+
   // Exported format: Plain HTML.
   $formats['ogmk_plain_html'] = array(
     'format' => 'ogmk_plain_html',

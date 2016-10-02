@@ -39,6 +39,7 @@ features[field_instance][] = field_collection_item-ogmk_costs-ogmk_cost_type_ref
 features[field_instance][] = field_collection_item-ogmk_costs-ogmk_long_text
 features[field_instance][] = field_collection_item-ogmk_costs-ogmk_price
 features[filter][] = ogmk_basic_html
+features[filter][] = ogmk_html
 features[filter][] = ogmk_plain_html
 features[user_permission][] = have the administrator role
 features[user_permission][] = have the anonymous user role
