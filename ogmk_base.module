@@ -28,6 +28,16 @@ function ogmk_base_permission() {
 }
 
 /**
+ * Implements hook_entity_info_alter().
+ */
+function ogmk_base_entity_info_alter(&$entity_info) {
+  $entity_info['comment']['view modes']['ogmk_bootstrap_media'] = array(
+    'label' => t('OGMK Bootstrap Media'),
+    'custom settings' => FALSE,
+  );
+}
+
+/**
  * Public API.
  */
 
