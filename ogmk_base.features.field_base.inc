@@ -10,29 +10,6 @@
 function ogmk_base_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'.
-  $field_bases['body'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(
-      0 => 'node',
-    ),
-    'field_name' => 'body',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-    ),
-    'translatable' => 1,
-    'type' => 'text_with_summary',
-  );
-
   /**
    * @Issue(
    *   "Consider moving description_field to ogmk_taxonomy module"
@@ -82,27 +59,6 @@ function ogmk_base_field_default_field_bases() {
     ),
     'translatable' => 1,
     'type' => 'text',
-  );
-
-  // Exported field_base: 'ogmk_body'.
-  $field_bases['ogmk_body'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'ogmk_body',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-    ),
-    'translatable' => 1,
-    'type' => 'text_with_summary',
   );
 
   // Exported field_base: 'ogmk_boolean'.
@@ -362,6 +318,27 @@ function ogmk_base_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'ogmk_text_with_summary'.
+  $field_bases['ogmk_text_with_summary'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'ogmk_text_with_summary',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 1,
+    'type' => 'text_with_summary',
   );
 
   // Exported field_base: 'title_field'.
