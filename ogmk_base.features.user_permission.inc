@@ -60,6 +60,7 @@ function ogmk_base_user_default_permissions() {
   $permissions['use text format ogmk_plain_html'] = array(
     'name' => 'use text format ogmk_plain_html',
     'roles' => array(
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
