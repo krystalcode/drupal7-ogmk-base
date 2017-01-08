@@ -51,6 +51,8 @@ function ogmk_base_user_default_permissions() {
     'name' => 'use text format ogmk_basic_html',
     'roles' => array(
       'administrator' => 'administrator',
+      'bonsai administrator' => 'bonsai administrator',
+      'bonsai user' => 'bonsai user',
       'merchant' => 'merchant',
     ),
     'module' => 'filter',
