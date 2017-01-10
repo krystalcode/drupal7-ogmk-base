@@ -1,8 +1,10 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the OGMK Base feature.
  */
+
+include_once 'ogmk_base.features.inc';
 
 /**
  * Hooks.

@@ -3,9 +3,23 @@ description = A module that provides base functionality and configuration for a 
 core = 7.x
 package = Commerce Marketplace Features
 version = 7.x-0.1-dev
+
+; OGMK dependencies.
+; @Issue(
+;   "Find out why Features require ogmk_pages and ogmk_taxonomy as dependencies,
+;   it shouldn't"
+;   type="bug"
+;   priority="low"
+;   labels="modularity"
+; )
+
+dependencies[] = ogmk_pages
 dependencies[] = ogmk_taxonomy
+
+; External dependencies.
 dependencies[] = ckeditor
 dependencies[] = commerce_price
+dependencies[] = ctools
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_collection
@@ -16,13 +30,17 @@ dependencies[] = link
 dependencies[] = list
 dependencies[] = number
 dependencies[] = options
+dependencies[] = paragraphs
+dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
 features[ckeditor_profile][] = ogmk_basic_html
 features[ckeditor_profile][] = ogmk_plain_html
+features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[field_base][] = description_field
 features[field_base][] = name_field
+features[field_base][] = ogmk_bean_ref
 features[field_base][] = ogmk_boolean
 features[field_base][] = ogmk_costs
 features[field_base][] = ogmk_image
@@ -32,6 +50,7 @@ features[field_base][] = ogmk_line_item_ref
 features[field_base][] = ogmk_link
 features[field_base][] = ogmk_node_product_ref
 features[field_base][] = ogmk_nodes_ref
+features[field_base][] = ogmk_paragraphs
 features[field_base][] = ogmk_price
 features[field_base][] = ogmk_text
 features[field_base][] = ogmk_text_long
@@ -40,12 +59,25 @@ features[field_base][] = title_field
 features[field_instance][] = field_collection_item-ogmk_costs-ogmk_cost_type_ref
 features[field_instance][] = field_collection_item-ogmk_costs-ogmk_price
 features[field_instance][] = field_collection_item-ogmk_costs-ogmk_text_long
+features[field_instance][] = paragraphs_item-basic-ogmk_text
+features[field_instance][] = paragraphs_item-basic-ogmk_text_long
+features[field_instance][] = paragraphs_item-block-ogmk_bean_ref
+features[field_instance][] = paragraphs_item-node_list-ogmk_link
+features[field_instance][] = paragraphs_item-node_list-ogmk_nodes_ref
+features[field_instance][] = paragraphs_item-node_list-ogmk_text
+features[field_instance][] = paragraphs_item-node_list-ogmk_text_long
 features[filter][] = ogmk_basic_html
 features[filter][] = ogmk_html
 features[filter][] = ogmk_plain_html
+features[paragraphs][] = basic
+features[paragraphs][] = block
+features[paragraphs][] = node_list
 features[user_permission][] = have the administrator role
 features[user_permission][] = have the anonymous user role
 features[user_permission][] = have the authenticated user role
 features[user_permission][] = have the merchant role
 features[user_permission][] = use text format ogmk_basic_html
 features[user_permission][] = use text format ogmk_plain_html
+features[variable][] = field_bundle_settings_paragraphs_item__basic
+features[variable][] = field_bundle_settings_paragraphs_item__block
+features[variable][] = field_bundle_settings_paragraphs_item__node_list
