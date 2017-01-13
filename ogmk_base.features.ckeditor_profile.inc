@@ -22,7 +22,7 @@ function ogmk_base_ckeditor_profile_defaults() {
 ]',
         'expand' => 't',
         'default' => 't',
-        'show_toggle' => 'f',
+        'show_toggle' => 't',
         'uicolor' => 'default',
         'uicolor_user' => 'default',
         'width' => '100%',
