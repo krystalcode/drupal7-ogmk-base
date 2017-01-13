@@ -18,6 +18,16 @@ function ogmk_base_filter_default_formats() {
     'status' => 1,
     'weight' => 0,
     'filters' => array(
+      /**
+       * @Issue(
+       *   "Properly configure HTMLPurifier to work with SCALD instead of
+       *   disabling it"
+       *   type="bug"
+       *   priority="normal"
+       *   labels="security, scald"
+       * )
+       */
+      /*
       'htmlpurifier_advanced' => array(
         'weight' => -50,
         'status' => 1,
@@ -170,6 +180,7 @@ news',
           ),
         ),
       ),
+      */
       'filter_htmlcorrector' => array(
         'weight' => -44,
         'status' => 1,
