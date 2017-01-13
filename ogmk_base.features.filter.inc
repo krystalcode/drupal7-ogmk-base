@@ -186,6 +186,11 @@ news',
         'status' => 1,
         'settings' => array(),
       ),
+      'mee_scald_widgets' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(),
+      ),
     ),
   );
 

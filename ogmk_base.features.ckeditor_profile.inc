@@ -16,7 +16,7 @@ function ogmk_base_ckeditor_profile_defaults() {
         'toolbar' => '[
     [\'Format\'],
     [\'Bold\',\'Italic\',\'Underline\',\'NumberedList\',\'BulletedList\'],
-    [\'Link\',\'Unlink\'],
+    [\'Link\',\'Unlink\',\'ScaldAtom\'],
     [\'Blockquote\'],
     [\'Maximize\']
 ]',
@@ -66,6 +66,17 @@ function ogmk_base_ckeditor_profile_defaults() {
             'path' => '%editor_path%/plugins/autogrow/',
             'buttons' => FALSE,
             'default' => 'f',
+          ),
+          'dndck4' => array(
+            'name' => 'dndck4',
+            'desc' => 'Scald Drag and Drop integration - CKEditor 4 widgets',
+            'path' => '%base_path%sites/all/modules/contrib/scald/modules/fields/mee/plugins/dndck4/',
+            'buttons' => array(
+              'ScaldAtom' => array(
+                'icon' => 'icons/atom.png',
+                'label' => 'Edit atom properties',
+              ),
+            ),
           ),
         ),
       ),

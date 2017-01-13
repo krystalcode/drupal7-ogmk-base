@@ -28,6 +28,7 @@ dependencies[] = htmlpurifier
 dependencies[] = image
 dependencies[] = link
 dependencies[] = list
+dependencies[] = mee
 dependencies[] = number
 dependencies[] = options
 dependencies[] = paragraphs
