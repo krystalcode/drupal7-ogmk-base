@@ -294,7 +294,7 @@ function ogmk_base_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'links' => 0,
-          'view_mode' => 'default',
+          'view_mode' => 'bootstrap_media_object',
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 0,
