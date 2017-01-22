@@ -28,6 +28,21 @@ function ogmk_base_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'ogmk_bootstrap_media_simple' => array(
+        'custom_settings' => TRUE,
+      ),
+      'ogmk_bootstrap_media' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ogmk_bootstrap_grid_3' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ogmk_bootstrap_grid_4' => array(
+        'custom_settings' => FALSE,
+      ),
+      'view_mode_selector' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(),
@@ -79,6 +94,21 @@ function ogmk_base_strongarm() {
       ),
       'token' => array(
         'custom_settings' => FALSE,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'custom_settings' => TRUE,
+      ),
+      'ogmk_bootstrap_media' => array(
+        'custom_settings' => FALSE,
+      ),
+      'view_mode_selector' => array(
+        'custom_settings' => FALSE,
+      ),
+      'ogmk_bootstrap_grid_3' => array(
+        'custom_settings' => TRUE,
+      ),
+      'ogmk_bootstrap_grid_4' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(

@@ -144,6 +144,43 @@ function ogmk_base_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
+  // Exported field_base: 'ogmk_email'.
+  $field_bases['ogmk_email'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'ogmk_email',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'email',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 254,
+    ),
+    'translatable' => 0,
+    'type' => 'email',
+  );
+
+  // Exported field_base: 'ogmk_icon'.
+  $field_bases['ogmk_icon'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'ogmk_icon',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'icon_field',
+    'settings' => array(
+      'bundle' => NULL,
+      'entity_translation_sync' => FALSE,
+      'icon' => NULL,
+    ),
+    'translatable' => 0,
+    'type' => 'icon_field',
+  );
+
   // Exported field_base: 'ogmk_image'.
   $field_bases['ogmk_image'] = array(
     'active' => 1,
@@ -392,6 +429,29 @@ function ogmk_base_field_default_field_bases() {
     'type' => 'commerce_price',
   );
 
+  // Exported field_base: 'ogmk_styles'.
+  $field_bases['ogmk_styles'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'ogmk_styles',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'paragraphs_styles',
+    'settings' => array(
+      'allowed_values' => array(),
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'paragraphs_styles',
+  );
+
   // Exported field_base: 'ogmk_text'.
   $field_bases['ogmk_text'] = array(
     'active' => 1,
@@ -454,6 +514,23 @@ function ogmk_base_field_default_field_bases() {
     ),
     'translatable' => 1,
     'type' => 'text_with_summary',
+  );
+
+  // Exported field_base: 'ogmk_view_mode'.
+  $field_bases['ogmk_view_mode'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'ogmk_view_mode',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'view_mode_selector',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'view_mode_selector',
   );
 
   // Exported field_base: 'title_field'.

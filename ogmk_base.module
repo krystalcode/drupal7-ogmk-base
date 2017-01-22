@@ -33,8 +33,37 @@ function ogmk_base_permission() {
  * Implements hook_entity_info_alter().
  */
 function ogmk_base_entity_info_alter(&$entity_info) {
+  // Comment view modes.
   $entity_info['comment']['view modes']['ogmk_bootstrap_media'] = array(
     'label' => t('OGMK Bootstrap Media'),
+    'custom settings' => FALSE,
+  );
+
+  // Node view modes.
+  $entity_info['node']['view modes']['ogmk_bootstrap_media'] = array(
+    'label' => t('OGMK Bootstrap Media'),
+    'custom settings' => FALSE,
+  );
+  $entity_info['node']['view modes']['ogmk_bootstrap_media_simple'] = array(
+    'label' => t('OGMK Bootstrap Media Simple'),
+    'custom settings' => FALSE,
+  );
+
+  // Paragraph view modes.
+  $entity_info['paragraphs_item']['view modes']['ogmk_bootstrap_media'] = array(
+    'label' => t('OGMK Bootstrap Media'),
+    'custom settings' => FALSE,
+  );
+  $entity_info['paragraphs_item']['view modes']['ogmk_bootstrap_media_simple'] = array(
+    'label' => t('OGMK Bootstrap Media Simple'),
+    'custom settings' => FALSE,
+  );
+  $entity_info['paragraphs_item']['view modes']['ogmk_bootstrap_grid_3'] = array(
+    'label' => t('OGMK 3-Column Bootstrap Grid'),
+    'custom settings' => FALSE,
+  );
+  $entity_info['paragraphs_item']['view modes']['ogmk_bootstrap_grid_4'] = array(
+    'label' => t('OGMK 4-Column Bootstrap Grid'),
     'custom settings' => FALSE,
   );
 }

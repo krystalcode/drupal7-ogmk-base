@@ -133,6 +133,159 @@ function ogmk_base_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-basic-ogmk_atom_ref'.
+  $field_instances['paragraphs_item-basic-ogmk_atom_ref'] = array(
+    'bundle' => 'basic',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'atom_reference',
+        'settings' => array(
+          'link' => 0,
+          'override' => 0,
+        ),
+        'type' => 'image_1110',
+        'weight' => 0,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'hidden',
+        'module' => 'atom_reference',
+        'settings' => array(
+          'link' => 0,
+          'override' => 0,
+        ),
+        'type' => 'image_150',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'ogmk_atom_ref',
+    'label' => 'Header Resource',
+    'required' => 0,
+    'settings' => array(
+      'allow_override' => 0,
+      'entity_translation_sync' => FALSE,
+      'referencable_types' => array(
+        'image' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'atom_reference',
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
+      'type' => 'atom_reference_textfield',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-basic-ogmk_icon'.
+  $field_instances['paragraphs_item-basic-ogmk_icon'] = array(
+    'bundle' => 'basic',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'icon_field',
+        'settings' => array(
+          'link_to_content' => FALSE,
+        ),
+        'type' => 'icon_field_default',
+        'weight' => 1,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'hidden',
+        'module' => 'icon_field',
+        'settings' => array(
+          'link_to_content' => FALSE,
+        ),
+        'type' => 'icon_field_default',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'ogmk_icon',
+    'label' => 'Icon',
+    'required' => 0,
+    'settings' => array(
+      'bundle' => NULL,
+      'entity_translation_sync' => FALSE,
+      'icon' => NULL,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'icon_field',
+      'settings' => array(),
+      'type' => 'icon_field',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-basic-ogmk_styles'.
+  $field_instances['paragraphs_item-basic-ogmk_styles'] = array(
+    'bundle' => 'basic',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'ogmk_styles',
+    'label' => 'Styles',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-basic-ogmk_text'.
   $field_instances['paragraphs_item-basic-ogmk_text'] = array(
     'bundle' => 'basic',
@@ -145,7 +298,14 @@ function ogmk_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 2,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -203,7 +363,7 @@ function ogmk_base_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -219,7 +379,14 @@ function ogmk_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 3,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -277,7 +444,84 @@ function ogmk_base_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-basic-ogmk_view_mode'.
+  $field_instances['paragraphs_item-basic-ogmk_view_mode'] = array(
+    'bundle' => 'basic',
+    'default_value' => array(
+      0 => array(
+        'value' => 'default',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'ogmk_view_mode',
+    'label' => 'View mode',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'number_placeholders' => FALSE,
+      'user_register_form' => FALSE,
+      'view_modes' => array(
+        'default' => array(
+          'enable' => 1,
+        ),
+        'diff_standard' => array(
+          'enable' => 0,
+        ),
+        'full' => array(
+          'enable' => 0,
+        ),
+        'ogmk_bootstrap_grid_3' => array(
+          'enable' => 0,
+        ),
+        'ogmk_bootstrap_grid_4' => array(
+          'enable' => 0,
+        ),
+        'ogmk_bootstrap_media' => array(
+          'enable' => 0,
+        ),
+        'ogmk_bootstrap_media_simple' => array(
+          'enable' => 1,
+        ),
+        'paragraphs_editor_preview' => array(
+          'enable' => 0,
+        ),
+        'token' => array(
+          'enable' => 0,
+        ),
+      ),
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'view_mode_selector',
+      'settings' => array(),
+      'type' => 'view_mode_selector_select',
+      'weight' => 3,
     ),
   );
 
@@ -351,6 +595,42 @@ function ogmk_base_field_default_field_instances() {
         'type' => 'link_bootstrap_button',
         'weight' => 3,
       ),
+      'ogmk_bootstrap_grid_3' => array(
+        'label' => 'hidden',
+        'module' => 'ogmk_pages',
+        'settings' => array(
+          'brand' => 'primary',
+          'icon_classes' => 'fa fa-arrow-right',
+          'position' => 'right',
+          'size' => 'default',
+        ),
+        'type' => 'link_bootstrap_button',
+        'weight' => 3,
+      ),
+      'ogmk_bootstrap_grid_4' => array(
+        'label' => 'hidden',
+        'module' => 'ogmk_pages',
+        'settings' => array(
+          'brand' => 'primary',
+          'icon_classes' => 'fa fa-arrow-right',
+          'position' => 'right',
+          'size' => 'default',
+        ),
+        'type' => 'link_bootstrap_button',
+        'weight' => 3,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'hidden',
+        'module' => 'ogmk_pages',
+        'settings' => array(
+          'brand' => 'primary',
+          'icon_classes' => 'fa fa-arrow-right',
+          'position' => 'right',
+          'size' => 'default',
+        ),
+        'type' => 'link_bootstrap_button',
+        'weight' => 3,
+      ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
         'settings' => array(),
@@ -391,7 +671,7 @@ function ogmk_base_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 6,
+      'weight' => 15,
     ),
   );
 
@@ -417,6 +697,48 @@ function ogmk_base_field_default_field_instances() {
           'wrapper_class' => 'thumbnail',
         ),
         'type' => 'entityreference_bootstrap_grid',
+        'weight' => 2,
+      ),
+      'ogmk_bootstrap_grid_3' => array(
+        'label' => 'hidden',
+        'module' => 'ogmk_pages',
+        'settings' => array(
+          'cols_clear' => 1,
+          'cols_lg' => 4,
+          'cols_md' => 4,
+          'cols_sm' => 6,
+          'cols_xs' => 12,
+          'links' => 1,
+          'view_mode' => 'teaser',
+          'wrapper_class' => 'thumbnail',
+        ),
+        'type' => 'entityreference_bootstrap_grid',
+        'weight' => 2,
+      ),
+      'ogmk_bootstrap_grid_4' => array(
+        'label' => 'hidden',
+        'module' => 'ogmk_pages',
+        'settings' => array(
+          'cols_clear' => 1,
+          'cols_lg' => 3,
+          'cols_md' => 4,
+          'cols_sm' => 6,
+          'cols_xs' => 12,
+          'links' => 1,
+          'view_mode' => 'teaser',
+          'wrapper_class' => 'thumbnail',
+        ),
+        'type' => 'entityreference_bootstrap_grid',
+        'weight' => 2,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'ogmk_bootstrap_media_simple',
+        ),
+        'type' => 'entityreference_entity_view',
         'weight' => 2,
       ),
       'paragraphs_editor_preview' => array(
@@ -448,7 +770,64 @@ function ogmk_base_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 5,
+      'weight' => 14,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-node_list-ogmk_styles'.
+  $field_instances['paragraphs_item-node_list-ogmk_styles'] = array(
+    'bundle' => 'node_list',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'ogmk_bootstrap_grid_3' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'ogmk_bootstrap_grid_4' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'ogmk_styles',
+    'label' => 'Styles',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 7,
     ),
   );
 
@@ -460,6 +839,27 @@ function ogmk_base_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'ogmk_bootstrap_grid_3' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'ogmk_bootstrap_grid_4' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -522,7 +922,7 @@ function ogmk_base_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -534,6 +934,27 @@ function ogmk_base_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'ogmk_bootstrap_grid_3' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'ogmk_bootstrap_grid_4' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -596,7 +1017,84 @@ function ogmk_base_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-node_list-ogmk_view_mode'.
+  $field_instances['paragraphs_item-node_list-ogmk_view_mode'] = array(
+    'bundle' => 'node_list',
+    'default_value' => array(
+      0 => array(
+        'value' => 'default',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'ogmk_bootstrap_grid_3' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'ogmk_bootstrap_grid_4' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'ogmk_bootstrap_media_simple' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'ogmk_view_mode',
+    'label' => 'View mode',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'number_placeholders' => FALSE,
+      'user_register_form' => FALSE,
+      'view_modes' => array(
+        'default' => array(
+          'enable' => 0,
+        ),
+        'diff_standard' => array(
+          'enable' => 0,
+        ),
+        'full' => array(
+          'enable' => 0,
+        ),
+        'paragraphs_editor_preview' => array(
+          'enable' => 0,
+        ),
+        'token' => array(
+          'enable' => 0,
+        ),
+      ),
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'view_mode_selector',
+      'settings' => array(),
+      'type' => 'view_mode_selector_select',
+      'weight' => 6,
     ),
   );
 
@@ -607,9 +1105,13 @@ function ogmk_base_field_default_field_instances() {
   t('Body');
   t('Content Items');
   t('Description');
+  t('Header Resource');
+  t('Icon');
   t('Link');
+  t('Styles');
   t('Title');
   t('Type');
+  t('View mode');
 
   return $field_instances;
 }
