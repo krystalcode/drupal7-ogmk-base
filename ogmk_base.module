@@ -145,7 +145,7 @@ function ogmk_base_entity_has_referencing_nodes($entity, $node_type, $field_name
 
   // Get the entity's id, depending on whether the id was passed
   $entity_id = NULL;
-  if (is_int($entity)) {
+  if (is_numeric($entity)) {
     $entity_id = $entity;
   } else {
     if (!$options['entity_type']) {
