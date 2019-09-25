@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * ogmk_base.features.field_base.inc
@@ -176,6 +177,8 @@ function ogmk_base_field_default_field_bases() {
       'bundle' => NULL,
       'entity_translation_sync' => FALSE,
       'icon' => NULL,
+      'wrapper' => NULL,
+      'wrapper_class' => NULL,
     ),
     'translatable' => 0,
     'type' => 'icon_field',

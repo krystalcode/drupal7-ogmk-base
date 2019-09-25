@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * ogmk_base.features.field_instance.inc
@@ -538,6 +539,7 @@ function ogmk_base_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'links' => 0,
+          'use_content_language' => TRUE,
           'view_mode' => 'bootstrap_media_object',
         ),
         'type' => 'entityreference_entity_view',
@@ -736,6 +738,7 @@ function ogmk_base_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'links' => 0,
+          'use_content_language' => TRUE,
           'view_mode' => 'ogmk_bootstrap_media_simple',
         ),
         'type' => 'entityreference_entity_view',

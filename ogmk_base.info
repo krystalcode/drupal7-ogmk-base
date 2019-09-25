@@ -9,6 +9,7 @@ dependencies[] = atom_reference
 dependencies[] = ckeditor
 dependencies[] = commerce_price
 dependencies[] = ctools
+dependencies[] = email
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = field_collection
