@@ -4,19 +4,6 @@ core = 7.x
 package = Commerce Marketplace Features
 version = 7.x-0.1-dev
 
-; OGMK dependencies.
-; @Issue(
-;   "Find out why Features require ogmk_pages and ogmk_taxonomy as dependencies,
-;   it shouldn't"
-;   type="bug"
-;   priority="low"
-;   labels="modularity"
-; )
-
-dependencies[] = ogmk_pages
-dependencies[] = ogmk_scald
-dependencies[] = ogmk_taxonomy
-
 ; External dependencies.
 dependencies[] = atom_reference
 dependencies[] = ckeditor
